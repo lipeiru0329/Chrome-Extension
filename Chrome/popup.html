@@ -1,0 +1,78 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title></title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #clickme{
+        box-shadow: rgb(239, 220, 251) 0px 1px 0px 0px inset; background: linear-gradient(rgb(223, 189, 250) 5%, rgb(188, 128, 234) 100%) rgb(223, 189, 250); border-radius: 16px; border: 1px solid rgb(197, 132, 243); display: inline-block; cursor: pointer; color: rgb(255, 255, 255); font-family: Arial; font-size: 15px; font-weight: bold; padding: 15px 24px; text-decoration: none; text-shadow: rgb(151, 82, 204) 0px 1px 0px;
+      }
+
+      #clickme:active{
+        box-shadow: rgb(239, 220, 251) 0px 1px 0px 0px inset; background: linear-gradient(rgb(137, 196, 3) 5%, rgb(119, 168, 9) 100%) rgb(137, 196, 3); border-radius: 16px; border: 1px solid rgb(197, 132, 243); display: inline-block; cursor: pointer; color: rgb(255, 255, 255); font-family: Arial; font-size: 15px; font-weight: bold; padding: 15px 24px; text-decoration: none; text-shadow: rgb(151, 82, 204) 0px 1px 0px;
+      }
+
+    </style>
+
+    <!-- <script type="text/javascript">
+      function MyAutoRun(){
+        // var x = document.getElementsByTagName("video");
+        // if(x.length === 0)
+        // {
+          document.getElementsByTagName('button').innerHTML = "Invalid";
+         // .getElementById('clickme').innerHTML = "Invalid";
+        // }
+        // else
+        // {
+        //   if(x[0].loop == true)
+        //   {
+        //     document.getElementById('clickme').innerHTML = "Looped";
+        //   }
+        //   else
+        //   {
+        //     document.getElementById('clickme').innerHTML = "Loop";
+        //   }
+        // }
+      }
+    </script> -->
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+    
+  </head>
+
+  <body>
+    <h1>Loop</h1>
+    <button id="clickme" >Loop</button>
+    <script type="text/javascript" src="loop.js"></script>
+    
+      <!-- <div class="wrapper">
+        <button id="clickme">Let's do it</button>
+      </div>
+      <script type="text/javascript" src="popup.js"></script>
+ -->
+  </body>
+</html>
