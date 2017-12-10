@@ -8,15 +8,15 @@ function runSwitchjs() {
 }
 
 
-function loadjs(){
-	document.getElementById('clickme').innerHTML = "Hasa";
-	chrome.tabs.executeScript({
-    file: 'background.js'
-    document.getElementById('clickme').innerHTML = "Invalid";
-    //'initial.js'
-  });
-	//alert("Initial");
-}
+// function loadjs(){
+// 	document.getElementById('clickme').innerHTML = "Hasa";
+// 	chrome.tabs.executeScript({
+//     file: 'background.js'
+//     document.getElementById('clickme').innerHTML = "Invalid";
+//     //'initial.js'
+//   });
+// 	//alert("Initial");
+// }
 
 function change_background(){
 	//alert(document.getElementById('clickme').innerHTML);
@@ -33,12 +33,12 @@ function change_background(){
 }
 
 document.getElementById('clickme').addEventListener('click', runSwitchjs);
-document.addEventListener("DOMContentLoaded", function() { 
-     loadjs();
-}, true);
+// document.addEventListener("DOMContentLoaded", function() { 
+//      loadjs();
+// }, true);
 
 
-chrome.runtime.onMessage.addListener(
- function(request, sender) {
-  alert("Contentscript has received a message from from background script: '" + request.message + "'");
-  });
+// chrome.runtime.onMessage.addListener(
+//  function(request, sender) {
+//   alert("Contentscript has received a message from from background script: '" + request.message + "'");
+//   });
