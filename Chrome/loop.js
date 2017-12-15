@@ -4,7 +4,12 @@ var port = chrome.runtime.connect({name:"background"});
 port.onMessage.addListener(function(message,sender){
 	  if(message.greeting === "hello"){
 	  	message_back = "123";
-	    alert(message_back);
+	  	chrome.storage.local.set({'value': message_back}, function() {
+          // Notify that we saved.
+          alert("message_save");
+        });
+	    //alert(message_back);
+	   
 	  }
 	});
 
@@ -17,18 +22,36 @@ function runSwitchjs() {
 
 	change_background();
 	alert("1");
-  	chrome.tabs.executeScript({
-    file: 'background.js'
-  });
+	if(document.getElementById('clickme').innerHTML === "Loop")
+	{
+		chrome.tabs.executeScript({
+	    file: 'background_loop.js'
+	  });
+	}
+	else
+	{
+		chrome.tabs.executeScript({
+	    file: 'background_looped.js'
+	  });
+	}	  	
 }
 
 
 
 
 function loadjs(){
-	alert(message_back);
+	//alert(message_back);
 	port = chrome.runtime.connect({name:"background"});
-	document.getElementById('clickme').innerHTML = "Hasa";
+	chrome.storage.local.get('value', function(result){
+		message_back = result.value;
+		alert(message_back);
+	});
+	//
+	alert(message_back);
+	 if(message_back === "123")
+		document.getElementById('clickme').innerHTML = "Has";
+	else if(message_back === "2")
+		document.getElementById('clickme').innerHTML = "assd";
 	// chrome.tabs.executeScript({
  //    file: 'initial_ini.js'
  //    //document.getElementById('clickme').innerHTML = "Invalid";

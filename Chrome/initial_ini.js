@@ -57,7 +57,7 @@ chrome.runtime.onConnect.addListener(function(port){
 	if(tab_status == 1)
 	{
 		port.postMessage({greeting:"hello"});
-		alert("hello");
+		//alert("hello");
 		tab_status = 0;
 	}
 });
