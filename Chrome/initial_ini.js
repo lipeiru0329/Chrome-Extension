@@ -37,6 +37,7 @@
 // });
 
 var tab_status = 0;
+var x = document.getElementsByTagName("video");
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {          
    if (changeInfo.status == 'complete') {  
@@ -56,7 +57,10 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 chrome.runtime.onConnect.addListener(function(port){
 	if(tab_status == 1)
 	{
-		port.postMessage({greeting:"hello"});
+		if(x.length == 0)
+			port.postMessage({greeting:"no_video"});
+		else 
+			port.postMessage({greeting:"video"});
 		//alert("hello");
 		tab_status = 0;
 	}
