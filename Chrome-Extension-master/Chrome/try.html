@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html> 
+<head> Try Video Loop</head> 
+
+
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<body> 
+
+<!-- <img src="//dslb.cdn.krcom.cn/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa_32768.jpg" alt="" suda-uatrack="key=wb_PC_H5_player&amp;value=vide_thumbnails_click">
+
+<video src="//gslb.miaopai.com/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa.mp4?yx=&amp;refer=weibo_app&amp;Expires=1511841270&amp;ssig=MS055LVXWy&amp;KID=unistore,video" 
+style="width: 500px; height: 281.25px;">
+            您的浏览器不支持HTML5
+	
+</video> -->
+
+<p></p>
+<!-- <video id="myVideo" width="500px" height="281.25px" controls>
+  <source src="//gslb.miaopai.com/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa.mp4?yx=&amp;refer=weibo_app&amp;Expires=1511841270&amp;ssig=MS055LVXWy&amp;KID=unistore,video"  >
+  
+</video><br> -->
+
+
+	<video autoplay controls class="player" id="player1" height="360"
+	width="100%" poster="http://www.chinapress.com.my/wp-content/uploads/2017/07/kexin-170716-b1.jpg"
+	preload="none" src="http://cncdn.miaopai.com/stream/s-c0QEPCmuQDo4eT~PFo~mslSlF5V9ZN_0_1500132855.mp4?ssig=c58cd9d8f053e2dd23da59f9a096c015&time_stamp=1512839528669"
+	style="max-width: 100%" tabindex="0" title="MediaElement" onclick="start_stop()">
+
+	Sorry, your browser doesn't support embedded videos, 
+	but don't worry, you can <a href="http://183.91.33.14/cache/gslb.miaopai.com/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa.mp4?yx=&amp;refer=weibo_app&amp;Expires=1511841270&amp;ssig=MS055LVXWy&amp;KID=unistore,video&ich_args=cab16c422b6768670ba8f49ac9c91bd8_7084_0_0_6_107ec4004cb65b17a16ed8fa4847ad71ec4f42f758bb391f0d418e0213d572be_23a9c8829e29e73747ad3bb28832f366_1_0&ich_ip=33-23">download it</a>
+	and watch it with your favorite video player!
+
+	</video>
+
+	<!-- <embed width="100%" height="350" wmode="transparent" allowfullscreen="true" quality="high" autostart="false" type="application/x-shockwave-flash" src="http://video.weibo.com/player/1034:dc95c50f885bc4ffa9c8fe63696d8b96/v.swf" id="em"> -->
+
+
+	<!-- <video controls="" src="http://cncdn.miaopai.com/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa_0_1500133303.mp4?ssig=da2fb1937ff10af0f747533b8b1c0189&time_stamp=1511944830356" style="width: 500px; height: 281.25px;">
+	Sorry, your browser doesn't support embedded videos, 
+	but don't worry, you can <a href="http://183.91.33.14/cache/gslb.miaopai.com/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa.mp4?yx=&amp;refer=weibo_app&amp;Expires=1511841270&amp;ssig=MS055LVXWy&amp;KID=unistore,video&ich_args=cab16c422b6768670ba8f49ac9c91bd8_7084_0_0_6_107ec4004cb65b17a16ed8fa4847ad71ec4f42f758bb391f0d418e0213d572be_23a9c8829e29e73747ad3bb28832f366_1_0&ich_ip=33-23">download it</a>
+	and watch it with your favorite video player!
+	</video> --><!-- <br> -->
+
+
+
+<!-- <button onclick="click_on()" > Button </button>
+
+<p class = "result" id = "result"></p> -->
+
+<button onclick="myFunction()">循环播放</button>
+
+<style type="text/css">
+	
+
+	.nav ul div img{
+	width: 300px; /*设置元素宽度为980px*/
+	height: 180px;
+	border:10px solid #456;/*设置一个颜色为#000，宽度为1px的边框*/
+	margin:0px auto;/*也可以简写为margin:0 auto*/
+	}
+	.nav ul li img{
+	float:left;/*让li元素左浮动*/
+	}
+
+	.nav ul li a img:hover{ /*这个大概的意思就是当鼠标放到这个a元素的上面时，这个a元素的样式就按下面的代码执行*/
+	width: 300px; /*设置元素宽度为980px*/
+	height: 180px;
+	line-height:28px;
+	border:1px solid red;
+	color:red;
+	background:#FFF;
+	}
+
+	.nav img{
+		margin-left: 80px;
+	}
+
+
+</style>
+
+
+<div style="overflow:scroll; ">
+
+	<ul>
+
+	<img src="http://www.chinapress.com.my/wp-content/uploads/2017/07/kexin-170716-b1.jpg" style="width: 200px; height: 120px; " onclick = "linkexin()">
+
+	<img src="https://cdn.hk01.com/media/images/693231/xlarge/9ef924ccce26bb8d0ab987deac691c14.jpg" style="width: 200px; height: 120px; " onclick = "huxia()">
+
+	<img src="https://i.ytimg.com/vi/G4w_1XDKRBU/maxresdefault.jpg" style="width: 200px; height: 120px; " onclick = "zhangzhilin()">
+
+	<img src="https://www.dcyoutube.com/image/T2ByjdvAZ3g" style="width: 200px; height: 120px; " onclick = "liyuchun()">
+
+	<img src="http://www.chinapress.com.my/wp-content/uploads/2017/07/kexin-170716-b1.jpg" style="width: 200px; height: 120px; " onclick = "linkexin()">
+
+	<img src="http://www.chinapress.com.my/wp-content/uploads/2017/07/kexin-170716-b1.jpg" style="width: 200px; height: 120px; " onclick = "linkexin()">
+
+	<img src="http://www.chinapress.com.my/wp-content/uploads/2017/07/kexin-170716-b1.jpg" style="width: 200px; height: 120px; " onclick = "linkexin()">
+
+
+	</ul>
+	
+</div>
+
+
+
+<p id="demo"></p>
+
+<script>
+function click_on() {
+    document.getElementById("demo").innerHTML = "Hello World";
+    console.log(5 + 6);
+}
+</script>
+
+
+<script>
+	
+	function myFunction() {
+		console.log(5 + 6);
+		var x = document.getElementsByTagName("video");
+		 console.log(typeof x[0].loop);
+		    if (typeof x[0].loop === 'boolean') { // loop supported
+			  x[0].loop = true;
+			} else { // loop property not supported
+			  x.addEventListener('ended', function () {
+			    this.currentTime = 0;
+			    this.play();
+			  }, false);
+			}
+			//...
+			start_stop();
+		    console.log("Loop");
+		   // document.getElementByClassName("result")
+		    document.getElementById("result").innerHTML = "result"; 
+
+	}
+
+	function start_stop(){
+		var x = document.getElementsByTagName("video");
+		console.log(x[0].currentTime > 0);
+		if(x[0].currentTime > 0 && !x[0].paused && !x[0].ended)
+		{
+			x[0].pause();
+		}
+		else
+		{
+			x[0].play();
+		}
+	}
+
+	function linkexin()
+	{
+		var x = document.getElementsByTagName("video");
+		console.log(6+6);
+		x[0].setAttribute("src", "http://cncdn.miaopai.com/stream/gRcYyGm2qFQBJMmg2SLz316eEbFk26wa_0_1500133303.mp4?ssig=da2fb1937ff10af0f747533b8b1c0189&time_stamp=1511944830356");
+		x[0].setAttribute("poster", "http://www.chinapress.com.my/wp-content/uploads/2017/07/kexin-170716-b1.jpg");
+
+		x[0].load();
+		//x[0].src = "http://t.cn/RKbZR5V ";
+		x[0].play();
+
+	}
+
+	function zhangzhilin()
+	{
+		var x = document.getElementsByTagName("video");
+		console.log(6+6);
+		x[0].setAttribute("src", "http://cncdn.miaopai.com/stream/t7-JwqxlIemef0ti3oPSXr-Co40uGOfx_0_1498923885.mp4?ssig=0ba1018bd9cecc773b6397d8e7cfc691&time_stamp=1512102443398");
+		x[0].load();
+		//x[0].src = "http://t.cn/RKbZR5V ";
+		x[0].play();
+
+	}
+
+	function liyuchun()
+	{
+		var x = document.getElementsByTagName("video");
+		console.log(6+6);
+		x[0].setAttribute("src", "http://cncdn.miaopai.com/stream/7QnJjh8~7JSFBnFNKg0k-bKFjkCmtsUd_0_1500135863.mp4?ssig=7414fa4503c9efa7a38d2938168bb3ec&time_stamp=1512028902852");
+		x[0].load();
+		//x[0].src = "http://t.cn/RKbZR5V ";
+		x[0].play();
+	}
+
+	function huxia()
+	{
+		
+		var x = document.getElementsByTagName("video");
+		console.log("huxia");
+		x[0].setAttribute("src", "http://video.weibo.com/player/1034:dc95c50f885bc4ffa9c8fe63696d8b96/v.swf");
+		x[0].setAttribute("poster", "https://cdn.hk01.com/media/images/693231/xlarge/9ef924ccce26bb8d0ab987deac691c14.jpg");
+		x[0].load();
+		//x[0].src = "http://t.cn/RKbZR5V ";
+		x[0].play();
+	}
+
+</script>
+
+
+</body> 
+</html>
+
